@@ -8,6 +8,9 @@ class RectangleTest {
     void coumputeAreaTest(){
         var rectangle = new Rectangle(4,8);
 
-        assertEquals(32, rectangle.computeArea());
+        rectangle.setHeight(rectangle.getHeight() - 1);
+        rectangle.setWidth(rectangle.getWidth() + 6);
+
+        assertEquals(42, rectangle.computeArea());
     }
 }
